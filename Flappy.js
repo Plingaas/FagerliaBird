@@ -42,7 +42,7 @@ if (localStorage.length < 30) {
     }
     localStorage.setItem("average", 0);
     localStorage.setItem("average.length", 0);
-    window.location.reload();
+    avg = 0;    
 }
 document.getElementById('average').innerHTML = "Average score: " + (avg/average.length).toFixed(2);
 
