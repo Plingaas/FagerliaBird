@@ -8,9 +8,7 @@ var gravity = -7;
 var birdURL = canvas.toDataURL(document.getElementById('bird'));
 var running = false;
 var avg = parseInt(localStorage.getItem("average"));
-if (avg == NaN) {
-    avg = 0;
-}
+
 var average = [];
 for (var i = 1; i <= localStorage.getItem("average.length"); i++) {
     average.push(parseInt(avg));
@@ -44,6 +42,7 @@ if (localStorage.length < 30) {
     }
     localStorage.setItem("average", 0);
     localStorage.setItem("average.length", 0);
+    window.location.reload();
 }
 document.getElementById('average').innerHTML = "Average score: " + (avg/average.length).toFixed(2);
 
