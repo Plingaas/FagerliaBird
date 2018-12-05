@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Flappy.css">
+    
+</head>
+<body style="margin: 0; background-image: linear-gradient(to right, #444, #444)">
+    <audio src="sfx_hit.mp3" id="sfx_hit"></audio>
+    <audio src="sfx_point.mp3" id="sfx_point"></audio>
+    <audio src="sfx_wing.mp3" id="sfx_wing"></audio>
+    <div>
+        <table style="position: absolute; margin: 89px 0px 0px 33px">
+            <tr>
+                <th id="highscores"><p id="highscoresP">Highscores</p></th>
+                <th><p id="top1"></p></th>
+                <th><p id="top2"></p></th>
+                <th><p id="top3"></p></th>
+                <th><p id="top4"></p></th>
+                <th><p id="top5"></p></th>
+                <th><p id="top6"></p></th>
+                <th><p id="top7"></p></th>
+                <th><p id="top8"></p></th>
+                <th><p id="top9"></p></th>
+                <th><p id="top10"></p></th>
+                <th><p id="top11"></p></th>
+                <th><p id="top12"></p></th>
+                <th><p id="top13"></p></th>
+                <th><p id="top14"></p></th>
+                <th><p id="top15"></p></th>
+                <th id = "lastTh"><p id="average"></p></th>
+            </tr>
+        </table>
+        <div>
+            <img src="background.png" id="bg" width="700" height="525" style="border-radius: 25px; margin-left: 25%; margin-top: 89px; position: absolute; border: 2px solid black;">
+            <canvas style="margin: 89px 39px 39px 25%; border-radius: 25px; position: absolute; border: 2px solid black;"></canvas>
+        </div>
+    </div>
+    <img src="bird.png" id="bird" width="1" height="1">
+    <img src="toppipe.png" id="toppipe" width="1" height="1">
+    <img src="botpipe.png" id="botpipe" width="1" height="1">
+    <script src="Flappy.js"></script>
+</body>
+</html>

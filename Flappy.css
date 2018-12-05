@@ -1,0 +1,45 @@
+#highscores {
+    padding-bottom: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; 
+    position: relative;
+    border: 2px solid black; 
+    width: 170px;
+    background-color: #ff9800;
+}
+
+#highscoresP {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+th {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    padding-top: 0px;
+    margin: 0;
+    position: relative;
+    width: 170px;
+    height: 28px;
+    text-align: left;
+    display: block;
+    background-color: #7bc2cc;
+}
+
+#lastTh {
+    border: 2px solid black;
+    padding-top: 0px;
+    margin: 0;
+    position: relative;
+    width: 170px;
+    height: 28px;
+    text-align: left;
+    display: block;
+    background-color: #a0d0f0;
+}
+
+p {
+    margin: 0px;
+    font-size: 18px;
+}
