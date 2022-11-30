@@ -4,10 +4,11 @@ let cW = canvas.width = 700;
 let cH = canvas.height = 525;
 window.addEventListener("keypress", checkInput, false);
 var startup = false;
-var gravity = -7;
+var gravity = -1;
 var birdURL = canvas.toDataURL(document.getElementById('bird'));
 var running = false;
 var avg = parseInt(localStorage.getItem("average"));
+var time = 0;
 
 var average = [];
 for (var i = 1; i <= localStorage.getItem("average.length"); i++) {
@@ -52,6 +53,7 @@ function getReady() {
 }
 
 function init() {
+    time = Date.now();
     running = true;
     getReady();
     play();
@@ -104,14 +106,14 @@ function Bird() {
         this.w = 51;
         this.h = 36;
         this.x = cW*0.4 - this.w;
-        this.gravity = -3;
+        this.yvel = 1;
         this.y = cH/2;
         this.score = 0;
         this.alive = true;
     },
 
     this.up = function(gravity) {
-        this.gravity = gravity;
+        this.yvel = -2;
     },
 
     this.draw = function() {
@@ -119,12 +121,13 @@ function Bird() {
     },
 
     this.update = function() {
-        this.y += this.gravity;
-        this.gravity += 0.5;
+        this.y += this.yvel;
+        this.yvel += (7*(Date.now()-time))/1000;
+        time = Date.now();
 
         if (this.y + this.h > cH) {
             this.y = cH - this.h;
-            this.gravity -= 0.4;
+            //this.gravity -= 0.4;
         }
 
         if (this.y < pipe.y || this.y + this.h > pipe.y + pipe.gap) {
